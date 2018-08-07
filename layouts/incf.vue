@@ -5,18 +5,15 @@
   	</div>
     <nav>
     	<nuxt-link tag="a" to="/">
-    		<img src="~assets/img/index/home_active.png"  v-if="type == 1">
-    		<img src="~assets/img/index/home.png" v-else>
+    		<div class="img-container index"></div>
     		<p>首页</p>
     	</nuxt-link>
     	<nuxt-link tag="a" to="/mylist">
-    		<img src="~assets/img/index/detailed_list_active.png" v-if="type == 2">
-    		<img src="~assets/img/index/detailed_list.png"  v-else>
+    		<div class="img-container mylist"></div>
     		<p>我的订单</p>
     	</nuxt-link>
     	<nuxt-link tag="a" to="/home">
-    		<img src="~assets/img/index/user_active.png"  v-if="type == 3">
-    		<img src="~assets/img/index/user.png"  v-else>
+    		<div class="img-container home"></div>
     		<p>我的</p>
     	</nuxt-link>
     </nav>
@@ -26,35 +23,7 @@
 <script>
 //只有page里有fetch和asyncData方法
 export default {
-	data () {
-		return {
-			type: null
-		}
-	},
-	mounted () {
-		this.setType(this.$route.path)
-	},
-	methods: {
-		setType (path) {
-			if(/^\/index/.test(path)||/^\/$/.test(path)){
-				this.type = 1
-				return 
-			}
-			if(/^\/mylist/.test(path)){
-				this.type = 2
-				return 
-			}
-			if(/^\/home/.test(path)){
-				this.type = 3
-				return 
-			}
-		}
-	},
-	watch: {
-		$route(to, from){
-			this.setType.call(this, to.path)
-		}
-	}
+
 }
 </script>
 
@@ -83,5 +52,34 @@ export default {
 				color: #666666
 				img 
 					width: 0.45rem
+			.index
+				width: 0.45rem
+				height: 0.45rem
+				background: url('~assets/img/index/home.png')
+				background-size: 0.45rem 0.45rem
+				margin: 0 auto
+			.mylist
+				width: 0.45rem
+				height: 0.45rem
+				background: url('~assets/img/index/detailed_list.png')
+				background-size: 0.45rem 0.45rem
+				margin: 0 auto
+			.home
+				width: 0.45rem
+				height: 0.45rem
+				background: url('~assets/img/index/user.png')
+				background-size: 0.45rem 0.45rem
+				margin: 0 auto
+			.nuxt-link-exact-active
+				color: #6998C9
+				.index
+					background: url('~assets/img/index/home_active.png')
+					background-size: 0.45rem 0.45rem
+				.mylist
+					background: url('~assets/img/index/detailed_list_active.png')
+					background-size: 0.45rem 0.45rem
+				.home
+					background: url('~assets/img/index/user_active.png')
+					background-size: 0.45rem 0.45rem
 
 </style>
