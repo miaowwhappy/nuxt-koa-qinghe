@@ -23,7 +23,7 @@
 <script>
 //只有page里有fetch和asyncData方法
 export default {
-
+ 
 }
 </script>
 
