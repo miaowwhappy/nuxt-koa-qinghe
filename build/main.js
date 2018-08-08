@@ -135,7 +135,11 @@ module.exports = {
     /*
      ** Run ESLINT on save
      */
-    extend: function extend(config, ctx) {}
+    extend: function extend(config, ctx) {},
+
+    performance: {
+      prefetch: false
+    }
   }
 };
 

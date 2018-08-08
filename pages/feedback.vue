@@ -17,7 +17,6 @@
 				maxlength="11"
 			>
 		</div>
-
 		<button class="submit btn" @click="submit">
 			提交
 		</button>
@@ -89,6 +88,8 @@ export default{
 			width: 100%
 			height: 3.7rem
 			font-size: 0.28rem
+			border: 1px solid #EEEEEE
+			padding: 0.2rem
 	.input-section
 		width: 7.1rem
 		height: 1rem
