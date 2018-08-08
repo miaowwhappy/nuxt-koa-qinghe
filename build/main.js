@@ -135,7 +135,11 @@ module.exports = {
     /*
      ** Run ESLINT on save
      */
-    extend: function extend(config, ctx) {}
+    extend: function extend(config, ctx) {},
+
+    performance: {
+      prefetch: false
+    }
   }
 };
 
@@ -144,8 +148,8 @@ module.exports = {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_router__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mongoose__ = __webpack_require__(0);
@@ -168,10 +172,10 @@ var User = __WEBPACK_IMPORTED_MODULE_2_mongoose___default.a.model('User');
 var router = new __WEBPACK_IMPORTED_MODULE_1_koa_router___default.a();
 
 router.post('/api/login', function () {
-	var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
+	var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
 		var _ctx$request$body, tel, password, user;
 
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
 			while (1) {
 				switch (_context.prev = _context.next) {
 					case 0:
@@ -219,8 +223,8 @@ router.post('/api/login', function () {
 	};
 }());
 router.post('/api/logout', function () {
-	var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(ctx, next) {
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+	var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(ctx, next) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
 			while (1) {
 				switch (_context2.prev = _context2.next) {
 					case 0:
@@ -242,10 +246,10 @@ router.post('/api/logout', function () {
 	};
 }());
 router.post('/api/register', function () {
-	var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(ctx, next) {
+	var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(ctx, next) {
 		var _ctx$request$body2, tel, code, pw, isTel, user;
 
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
 			while (1) {
 				switch (_context3.prev = _context3.next) {
 					case 0:
@@ -309,10 +313,10 @@ router.post('/api/register', function () {
 }());
 
 router.post('/api/reset_pw_step1', function () {
-	var _ref4 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4(ctx, next) {
+	var _ref4 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4(ctx, next) {
 		var _ctx$request$body3, tel, code, isTel;
 
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
 			while (1) {
 				switch (_context4.prev = _context4.next) {
 					case 0:
@@ -363,10 +367,10 @@ router.post('/api/reset_pw_step1', function () {
 	};
 }());
 router.post('/api/reset_pw_step2', function () {
-	var _ref5 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee5(ctx, next) {
+	var _ref5 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee5(ctx, next) {
 		var _ctx$request$body4, tel, code, pw, isTel;
 
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee5$(_context5) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee5$(_context5) {
 			while (1) {
 				switch (_context5.prev = _context5.next) {
 					case 0:
@@ -428,8 +432,8 @@ router.post('/api/reset_pw_step2', function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_router__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mongoose__ = __webpack_require__(0);
@@ -467,10 +471,10 @@ var sleep = function sleep(time) {
 };
 
 home.post('/api/feedback/post', function () {
-	var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
+	var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
 		var _ctx$request$body, content, tel, feedback;
 
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
 			while (1) {
 				switch (_context.prev = _context.next) {
 					case 0:
@@ -502,9 +506,9 @@ home.post('/api/feedback/post', function () {
 }());
 
 home.get('/api/coupon/get', function () {
-	var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(ctx, next) {
+	var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(ctx, next) {
 		var couponGroup;
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
 			while (1) {
 				switch (_context2.prev = _context2.next) {
 					case 0:
@@ -556,10 +560,10 @@ home.get('/api/coupon/get', function () {
 }());
 
 home.post('/api/evaluation/post', function () {
-	var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(ctx, next) {
+	var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(ctx, next) {
 		var _ctx$request$body2, timeStarNum, attitudeStarNum, qualityStarNum, tags, content, userId, evaluation;
 
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
 			while (1) {
 				switch (_context3.prev = _context3.next) {
 					case 0:
@@ -606,9 +610,9 @@ home.post('/api/evaluation/post', function () {
 }());
 
 home.post('/api/evaluations/get', function () {
-	var _ref4 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4(ctx, next) {
+	var _ref4 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4(ctx, next) {
 		var count, list;
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
 			while (1) {
 				switch (_context4.prev = _context4.next) {
 					case 0:
@@ -643,10 +647,10 @@ home.post('/api/evaluations/get', function () {
 }());
 
 home.post('/api/hasPayList/get', function () {
-	var _ref5 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee5(ctx, next) {
+	var _ref5 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee5(ctx, next) {
 		var hasPay, _ctx$request$body3, page, limit, pages, start, end;
 
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee5$(_context5) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee5$(_context5) {
 			while (1) {
 				switch (_context5.prev = _context5.next) {
 					case 0:
@@ -739,10 +743,10 @@ home.post('/api/hasPayList/get', function () {
 }());
 
 home.post('/api/allList/get', function () {
-	var _ref6 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee6(ctx, next) {
+	var _ref6 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee6(ctx, next) {
 		var all, _ctx$request$body4, page, limit, pages, start, end;
 
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee6$(_context6) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee6$(_context6) {
 			while (1) {
 				switch (_context6.prev = _context6.next) {
 					case 0:
@@ -836,10 +840,10 @@ home.post('/api/allList/get', function () {
 }());
 
 home.post('/api/address/post', function () {
-	var _ref7 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee7(ctx, next) {
+	var _ref7 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee7(ctx, next) {
 		var _ctx$request$body5, name, gender, tel, city, address, isDefault, userId, addressNew;
 
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee7$(_context7) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee7$(_context7) {
 			while (1) {
 				switch (_context7.prev = _context7.next) {
 					case 0:
@@ -899,9 +903,9 @@ home.post('/api/address/post', function () {
 	};
 }());
 home.post('/api/address/get', function () {
-	var _ref8 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee8(ctx, next) {
+	var _ref8 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee8(ctx, next) {
 		var id, li;
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee8$(_context8) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee8$(_context8) {
 			while (1) {
 				switch (_context8.prev = _context8.next) {
 					case 0:
@@ -930,10 +934,10 @@ home.post('/api/address/get', function () {
 	};
 }());
 home.post('/api/address/update', function () {
-	var _ref9 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee9(ctx, next) {
+	var _ref9 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee9(ctx, next) {
 		var _ctx$request$body6, name, gender, tel, city, address, isDefault, id, userId;
 
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee9$(_context9) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee9$(_context9) {
 			while (1) {
 				switch (_context9.prev = _context9.next) {
 					case 0:
@@ -981,9 +985,9 @@ home.post('/api/address/update', function () {
 	};
 }());
 home.get('/api/addressList/get', function () {
-	var _ref10 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee10(ctx, next) {
+	var _ref10 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee10(ctx, next) {
 		var userId, list;
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee10$(_context10) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee10$(_context10) {
 			while (1) {
 				switch (_context10.prev = _context10.next) {
 					case 0:
@@ -1021,9 +1025,9 @@ home.get('/api/addressList/get', function () {
 }());
 
 home.post('/api/addressList/setDefault', function () {
-	var _ref11 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee11(ctx, next) {
+	var _ref11 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee11(ctx, next) {
 		var id, userId, li, list;
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee11$(_context11) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee11$(_context11) {
 			while (1) {
 				switch (_context11.prev = _context11.next) {
 					case 0:
@@ -1067,9 +1071,9 @@ home.post('/api/addressList/setDefault', function () {
 	};
 }());
 home.post('/api/addressList/cancel', function () {
-	var _ref12 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee12(ctx, next) {
+	var _ref12 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee12(ctx, next) {
 		var id, userId, li, list;
-		return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee12$(_context12) {
+		return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee12$(_context12) {
 			while (1) {
 				switch (_context12.prev = _context12.next) {
 					case 0:
@@ -1243,8 +1247,8 @@ module.exports = require("regenerator-runtime");
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nuxt__ = __webpack_require__(9);
@@ -1262,11 +1266,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var _this = this;
 
 var start = function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4() {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4() {
     var _this2 = this;
 
     var app, host, port, config, nuxt, builder, CONFIG;
-    return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
+    return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
@@ -1316,8 +1320,8 @@ var start = function () {
             app.use(__WEBPACK_IMPORTED_MODULE_7__routes_home__["a" /* home */].routes());
 
             app.use(function () {
-              var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(ctx, next) {
-                return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+              var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(ctx, next) {
+                return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
                   while (1) {
                     switch (_context2.prev = _context2.next) {
                       case 0:
@@ -1358,8 +1362,8 @@ var start = function () {
               useNewUrlParser: true
             });
 
-            __WEBPACK_IMPORTED_MODULE_5_mongoose___default.a.connection.on('open', _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3() {
-              return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
+            __WEBPACK_IMPORTED_MODULE_5_mongoose___default.a.connection.on('open', _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3() {
+              return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
                 while (1) {
                   switch (_context3.prev = _context3.next) {
                     case 0:
@@ -1397,8 +1401,8 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
 var auth = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
-    return __WEBPACK_IMPORTED_MODULE_0__Users_miaoww_Desktop_nuxt_koa_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
+    return __WEBPACK_IMPORTED_MODULE_0__home_qinghe_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
