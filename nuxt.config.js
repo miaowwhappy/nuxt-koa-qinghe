@@ -59,6 +59,9 @@ module.exports = {
      */
     extend (config, ctx) {
 
+    },
+    performance: {
+      prefetch: false
     }
   }
 }

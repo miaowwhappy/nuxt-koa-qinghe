@@ -7,7 +7,6 @@
 					<div class="main-side">
 						<p>¥99/套<span>已售12</span></p>
 						<p>单次·居家保洁</p>
-						<img src="">
 					</div>
 				</div>
 				<nuxt-link tag="div" to="/word-of-mouth" class="evaluate-box item-box">
