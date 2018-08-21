@@ -91,7 +91,7 @@ export default {
 				padding: 0.3rem
 				img
 					width: 100%
-					height: 10.754rem
+					height: 107.54rem
 					display: block
 				.title
 					font-size: 0.28rem
