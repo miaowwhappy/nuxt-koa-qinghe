@@ -1,64 +1,70 @@
 <template>
-<div class="wrap">
-	<div class="top">
-		<div class="where">
-			<img src="~assets/img/index/where.png">珠海
-		</div>
-		<img src="~assets/img/index/logo.png">
-	</div>
-	<div class="slide" ref="slide">
-		<div class="slide-group" ref="slideGroup">
-			<div class="slide-item">
-				<img src="~assets/img/index/banner-1.jpg">
+<scroll>
+	<div class="wrap">
+		<div class="top">
+			<div class="where">
+				<img src="~assets/img/index/where.png">珠海
 			</div>
-			<div class="slide-item">
-				<img src="~assets/img/index/banner-2.jpg">
-			</div>
+			<img src="~assets/img/index/logo.png">
 		</div>
-		<nav class="dots">
-			<span class="dot" :class="{active: currentPageIndex === index}" v-for="(item, index) in dots"></span>
-		</nav>
-	</div>
-	<nav class="center-nav">
-		<nuxt-link class="link-item" tag="div" to="/home/coupon">
-			<img src="~assets/img/index/yhq.png">
-			优惠神券
-		</nuxt-link>
-		<nuxt-link class="link-item" tag="div" to="/feedback">
-			<img src="~assets/img/index/yjfk.png">
-			意见反馈
-		</nuxt-link>
-		<nuxt-link class="link-item" tag="div" to="/home/clean-record">
-			<img src="~assets/img/index/bjjl.png">
-			保洁记录
-		</nuxt-link>
-		<nuxt-link class="link-item" tag="div" to="/about">
-			<img src="~assets/img/index/ljqh.png">
-			了解清和
-		</nuxt-link>
-	</nav>
-	<div class="content-box">
-		<ul>
-			<nuxt-link tag="li" v-for="(item,index,key) in serviceType" :key="key" to="detail">
-				<img :src="item.imgUrl">
-				<div class="detail">
-					<p>{{item.name}}</p>
-					<p>{{item.type}}</p>
-					<p><span>{{item.tip}}</span></p>					
-					<p>¥{{item.money}}/套</p>
+		<div class="slide" ref="slide">
+			<div class="slide-group" ref="slideGroup">
+				<div class="slide-item">
+					<img src="~assets/img/index/banner-1.jpg">
 				</div>
-				<span class="sail-times">已售{{item.sailTimes}}次</span>
+				<div class="slide-item">
+					<img src="~assets/img/index/banner-2.jpg">
+				</div>
+			</div>
+			<nav class="dots">
+				<span class="dot" :class="{active: currentPageIndex === index}" v-for="(item, index) in dots"></span>
+			</nav>
+		</div>
+		<nav class="center-nav">
+			<nuxt-link class="link-item" tag="div" to="/home/coupon">
+				<img src="~assets/img/index/yhq.png">
+				优惠神券
 			</nuxt-link>
-		</ul>
-	</div>	
-</div>
+			<nuxt-link class="link-item" tag="div" to="/feedback">
+				<img src="~assets/img/index/yjfk.png">
+				意见反馈
+			</nuxt-link>
+			<nuxt-link class="link-item" tag="div" to="/home/clean-record">
+				<img src="~assets/img/index/bjjl.png">
+				保洁记录
+			</nuxt-link>
+			<nuxt-link class="link-item" tag="div" to="/about">
+				<img src="~assets/img/index/ljqh.png">
+				了解清和
+			</nuxt-link>
+		</nav>
+		<div class="content-box">
+			<ul>
+				<nuxt-link tag="li" v-for="(item,index,key) in serviceType" :key="key" to="detail">
+					<img :src="item.imgUrl">
+					<div class="detail">
+						<p>{{item.name}}</p>
+						<p>{{item.type}}</p>
+						<p><span>{{item.tip}}</span></p>					
+						<p>¥{{item.money}}/套</p>
+					</div>
+					<span class="sail-times">已售{{item.sailTimes}}次</span>
+				</nuxt-link>
+			</ul>
+		</div>	
+	</div>
+</scroll>
 </template>
 <script>
 import BScroll from 'better-scroll'
+import Scroll from "~/components/scroll"
 
 export default {
 
 	layout: 'incf',
+	components: {
+		Scroll
+	},
 	data () {
 		return {
 			loop: true,
