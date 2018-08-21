@@ -1,6 +1,6 @@
 <template>
 	<div class="wrap">
-		<div class="page-view">
+		<scroll ref="scroll" class="page-view">
 			<div class="page-wrapper">
 				<div class="header-box item-box">
 					<img src="~assets/img/banner.jpg">
@@ -20,7 +20,7 @@
 					预定须知
 				</div>
 			</div>
-		</div>
+		</scroll>
 		<div class="bottom-fix-side">
 			<button class="contact">联系客服</button>
 			<button class="commit" @click="commit">立即下单</button>
@@ -28,7 +28,11 @@
 	</div>	
 </template>
 <script>
+import Scroll from "~/components/scroll"
 export default {
+	components: {
+		Scroll
+	},
 	methods: {
 		commit() {
 			this.$router.push('/commit-order')
@@ -46,7 +50,7 @@ export default {
 	.page-view
 		height: 100%
 		padding-bottom: 1.1rem
-		overflow-y: scroll
+		overflow: hidden;
 		.page-wrapper
 			.item-box
 				background-color: #ffffff
@@ -107,6 +111,7 @@ export default {
 		bottom: 0
 		display: flex
 		align-items: stretch
+		z-index: 10
 		.contact
 			flex: auto
 			background: #ffffff
