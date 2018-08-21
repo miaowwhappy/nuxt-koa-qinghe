@@ -42,10 +42,11 @@ export default {
 .wrap
 	height: 100%
 	background: $base-bc-blue
+	overflow: hidden
 	.page-view
 		height: 100%
 		padding-bottom: 1.1rem
-		overflow: auto
+		overflow-y: scroll
 		.page-wrapper
 			.item-box
 				background-color: #ffffff
