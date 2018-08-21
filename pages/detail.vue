@@ -14,7 +14,7 @@
 				</nuxt-link>
 				<div class="introduce-box item-box">
 					<div class="title">产品介绍</div>
-					<img src="~assets/img/content.jpg">
+					<img src="~assets/img/content2.jpg">
 				</div>	
 				<div class="need-know item-box">
 					预定须知
