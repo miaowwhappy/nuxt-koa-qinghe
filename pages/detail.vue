@@ -19,6 +19,9 @@
 				<div class="need-know item-box">
 					预定须知
 				</div>
+				<div class="bottom-bar">
+					
+				</div>
 			</div>
 		</scroll>
 		<div class="bottom-fix-side">
@@ -49,8 +52,6 @@ export default {
 	overflow: hidden
 	.page-view
 		height: 100%
-		padding-bottom: 1.1rem
-		overflow: hidden;
 		.page-wrapper
 			.item-box
 				background-color: #ffffff
@@ -103,6 +104,8 @@ export default {
 				line-height: 0.4rem
 				font-size: 0.28rem
 				color: #22252E
+			.bottom-bar
+				height: 1.1rem
 	.bottom-fix-side
 		position: fixed
 		width: 100%
