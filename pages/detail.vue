@@ -90,7 +90,7 @@ export default {
 			.introduce-box
 				padding: 0.3rem
 				img
-					width: 100%
+					width: 6.9rem
 					height: 107.54rem
 					display: block
 				.title
